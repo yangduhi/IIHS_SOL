@@ -1,0 +1,13 @@
+.auth/
+.venv/
+.playwright-cli/
+output/
+data/raw/
+node_modules/
+__pycache__/
+.pytest_cache/
+.ai/runlog/reports/
+docs/changes/
+docs/conversations/
+docs/sessions/
+docs/reports/

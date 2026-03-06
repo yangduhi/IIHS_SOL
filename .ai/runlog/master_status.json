@@ -1,0 +1,11 @@
+{
+  "project": "IIHS Small Overlap Downloader",
+  "status": "bootstrap_ready",
+  "current_phase": "authenticated discovery completed",
+  "last_snapshot": "2026-03-06T16:25:00+09:00",
+  "next_actions": [
+    "Implement historical list crawler for t=25",
+    "Implement historical list crawler for t=26",
+    "Implement filegroup folder traversal and file manifest writer"
+  ]
+}
