@@ -1,25 +1,25 @@
-# Domain Approval Logic Review
+# 도메인 Approval Logic 검토
 
 - generated_at: `2026-03-11T05:14:25Z`
-- scope: compare pooled approval logic against domain-aware approval logic
+- 범위: pooled 승인 로직을 도메인 인식 승인 로직과 비교
 
-## Readout
+## 판독
 
-- pooled severity proxy model adj R^2: `0.0748`
-- lower-extremity proxy model adj R^2: `0.0877`
-- head-neck-chest proxy model adj R^2: `0.0194`
-- structure/intrusion proxy model adj R^2: `0.0379`
-- restraint/kinematics proxy model adj R^2: `0.0111`
+- 풀링된 심각도 프록시 모델 조정 R^2: `0.0748`
+- lower-extremity 프록시 모델 조정 R^2: `0.0877`
+- head-neck-chest 프록시 모델 조정 R^2: `0.0194`
+- 구조/침입 프록시 모델 조정 R^2: `0.0379`
+- 구속/운동학 프록시 모델 조정 R^2: `0.0111`
 
-## Decision Frame
+## 결정 프레임
 
-- Pooled safety severity should remain a summary-only readout.
-- Lower-extremity is the current primary approval domain.
-- Head-neck-chest and structure/intrusion can support interpretation when they align with lower-extremity.
-- Restraint/kinematics is currently too weak to drive naming or approval.
+- 통합된 안전 심각도는 요약 전용 판독값으로 유지되어야 합니다.
+- Lower-extremity는 현재 기본 승인 도메인입니다.
+- Head-neck-chest 및 구조/침입은 lower-extremity와 일치할 때 해석을 지원할 수 있습니다.
+- 구속/운동학은 현재 이름 지정이나 승인을 유도하기에는 너무 약합니다.
 
-## Recommendation
+## 추천
 
-- Do not approve taxonomy changes from pooled severity alone.
-- Use domain scores as the reviewer-facing approval layer until mode standardization becomes more stable.
-- Keep subgroup signals as exploratory hints inside the domain frame, not as standalone approval evidence.
+- 풀링된 심각도만으로 분류법 변경을 승인하지 마십시오.
+- 모드 표준화가 더욱 안정될 때까지 도메인 점수를 검토자 측 승인 레이어로 사용하세요.
+- 하위 그룹 신호를 독립형 승인 증거가 아닌 도메인 프레임 내부의 탐색 힌트로 유지하세요.

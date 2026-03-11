@@ -1,0 +1,10 @@
+generated_at=2026-03-11T06:32:43Z
+features=slide_away/artifacts/marts/features_v1.parquet
+outcomes=slide_away/artifacts/marts/outcomes_v1.parquet
+mode_assignments=slide_away/artifacts/tables/mode_case_assignments.csv
+domain_table=slide_away/artifacts/tables/domain_score_sensitivity_summary.csv
+lower_ext_table=slide_away/artifacts/tables/lower_ext_component_sensitivity.csv
+figure=slide_away/artifacts/figures/domain_score_sensitivity_overview.png
+review=slide_away/reviews/03_analysis/15_domain_score_sensitivity_review.md
+rows=406
+lower_ext_wins=7/7

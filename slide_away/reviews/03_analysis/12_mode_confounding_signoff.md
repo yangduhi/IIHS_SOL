@@ -1,21 +1,21 @@
-# Mode Confounding Sign-Off Review
+# 모드 Confounding Sign-Off 검토
 
 - generated_at: `2026-03-11T05:14:08Z`
-- scope: selected mode structure only
+- 범위: 선택한 모드 구조만
 
-## Minor Cluster Headline
+## 마이너 클러스터 헤드라인
 
-- `test_side` top category `driver`: cluster share `1.0000`, overall share `0.8693`, enrichment `1.1503`
-- `era` top category `2001-2014`: cluster share `1.0000`, overall share `0.3769`, enrichment `2.6533`
-- `weight_quartile` top category `Q2`: cluster share `0.5000`, overall share `0.1407`, enrichment `3.5536`
-- family mix: Honda Accord 4 door (1), Honda Civic 4 Door (1), Volvo XC 60 (1), Honda Accord 2 door (1), Honda Civic 2 door (1)
+- `test_side` 상위 카테고리 `driver`: 클러스터 공유 `1.0000`, 전체 공유 `0.8693`, 강화 `1.1503`
+- `era` 상위 카테고리 `2001-2014`: 클러스터 공유 `1.0000`, 전체 공유 `0.3769`, 강화 `2.6533`
+- `weight_quartile` 상위 카테고리 `Q2`: 클러스터 공유 `0.5000`, 전체 공유 `0.1407`, 강화 `3.5536`
+- 패밀리 믹스: Honda Accord 4도어(1), Honda Civic 4도어(1), Volvo XC 60(1), Honda Accord 2도어(1), Honda Civic 2도어(1)
 
-## Interpretation
+## 해석
 
-- The selected minor cluster remains confounded if side or era concentration is near-complete.
-- Weight-quartile concentration is a proxy warning, not a full causal explanation.
-- Family dispersion alone does not close confounding when the cluster is this small.
+- 선택한 마이너 클러스터는 측면 또는 시대 집중이 거의 완료되면 혼란스러운 상태로 유지됩니다.
+- 체중-사분위수 집중은 완전한 인과관계 설명이 아니라 대리 경고입니다.
+- 클러스터가 이렇게 작을 때 패밀리 분산만으로는 confounding가 닫히지 않습니다.
 
-## Recommendation
+## 추천
 
-- Keep the current selected mode structure on `hold` until these concentration patterns are explicitly accepted or rejected by review.
+- 이러한 집중 패턴이 명시적으로 승인되거나 검토를 통해 거부될 때까지 `hold`에서 현재 선택된 모드 구조를 유지합니다.

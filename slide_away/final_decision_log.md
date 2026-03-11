@@ -1,60 +1,63 @@
-# Final Decision Log
+# 최종 결정 로그
 
-- Decision date: `2026-03-11`
-- Current approval state: `hold`
+- 결정 날짜: `2026-03-11`
+- 현재 승인 상태: `hold`
 
-## Decision
+## 결정
 
-The `slide_away` package is not approved as a final operating standard.
+`slide_away` 패키지는 최종 운영 표준으로 승인되지 않았습니다.
 
-## Why Approval Did Not Advance
+## 승인이 진행되지 않은 이유
 
-1. The package is now executable, but validation remains weaker than a final operating standard requires.
-2. The current `100 ms` candidate only slightly outperforms the historic `0-150 ms` baseline and still needs manual acceptance.
-3. The selected mode structure is highly imbalanced at `392 / 6`.
-4. The `6`-case minor cluster is entirely `driver` and limited to `2012 - 2013`, so confounding remains plausible.
-5. The current RI-to-safety linkage is weak at cohort level.
-6. Proxy-aware linkage is better than RI alone, but most of the gain comes from context proxies rather than RI interaction terms.
-7. Domain outcome linkage is strongest on lower-extremity and not on a pooled redirection axis.
-8. Preregistered lower-ext subgroup validation is promising but still exploratory.
-9. Final naming for `slide_away` modes is still not defensible.
+1. 이제 패키지를 실행할 수 있지만 유효성 검사는 최종 운영 표준에서 요구하는 것보다 여전히 약합니다.
+2. 현재 `100 ms` 후보는 과거 `0-150 ms` 기준보다 약간만 성능이 뛰어나며 여전히 수동 승인이 필요합니다.
+3. 선택된 모드 구조는 `392 / 6`에서 불균형이 매우 심합니다.
+4. `6` 케이스 마이너 클러스터는 완전히 `driver`이고 `2012 - 2013`로 제한되므로 confounding 가능성은 여전히 타당합니다.
+5. 현재 RI-안전 연결은 코호트 수준에서 약합니다.
+6. 프록시 인식 연결은 RI 단독보다 낫지만 대부분의 이점은 RI 상호 작용 용어가 아닌 컨텍스트 프록시에서 비롯됩니다.
+7. 도메인 결과 연결은 풀링된 redirection 축이 아닌 lower-extremity에서 가장 강력합니다.
+8. 도메인 점수 민감도 검토에서도 `lower_extremity`는 테스트한 `7/7` scenario에서 primary domain으로 유지됩니다.
+9. lower-ext 내부에서는 `foot_resultant_accel` 계열이 `thigh_hip_risk_proxy`보다 훨씬 큰 설명력을 보입니다.
+10. 사전 등록된 하위 하위 그룹 검증은 유망하지만 여전히 탐색적입니다.
+11. `slide_away` 모드의 최종 이름은 아직 방어할 수 없습니다.
 
-## What Was Accepted
+## 무엇이 받아들여졌는가
 
-- standard wrapper interface
-- reproducible `signal_ready_flag`
-- case master, outcome mart, feature mart
-- occupant-compartment `x/y/z` acceleration as the primary physical reading layer for the next pass
-- window sweep, mode study, RI map, casebook
-- `100 ms` vs `0-150 ms` comparison review
-- `6`-case minor-cluster review
-- extended linkage review with harshness, seat-response, and subgroup summaries
-- domain outcome linkage review across structure, lower-extremity, restraint, and head-neck-chest axes
-- preregistered lower-extremity subgroup validation
-- mode confounding sign-off review
-- domain-aware approval logic review
-- observation-flavored naming review
-- QA logs and review notes under `slide_away`
-- expanded `unittest` coverage for shared helpers, feature rules, window selection, and domain join logic
+- 표준 래퍼 인터페이스
+- 재현 가능한 `signal_ready_flag`
+- 케이스마스터, 아웃컴마트, 피처마트
+- 다음 패스를 위한 기본 물리적 읽기 계층인 occupant-compartment `x/y/z` 가속
+- window sweep, 모드 분석, RI 지도, casebook
+- `100 ms` 대 `0-150 ms` 비교 검토
+- `6` 사례 마이너 클러스터 검토
+- harshness, seat-response 및 하위 그룹 요약을 사용한 확장된 연결 검토
+- 구조, lower-extremity, 제한 및 head-neck-chest 축 전반에 걸친 도메인 결과 연계 검토
+- 사전 등록된 lower-extremity 하위 그룹 검증
+- 모드 confounding sign-off 검토
+- 도메인 인식 승인 로직 검토
+- 도메인 점수 민감도 검토
+- 관찰 중심 네이밍 리뷰
+- `slide_away` 아래의 QA 로그 및 검토 메모
+- 공유 도우미, 기능 규칙, 창 선택 및 도메인 가입 논리에 대한 확장된 `unittest` 적용 범위 (`14` tests)
 
-## What Remains Provisional
+## 잠정적으로 남아 있는 것
 
-- operating window promotion from historic `0-150 ms` baseline to current `100 ms` candidate
-- any final mode count
-- any final `redirection-dominant` or `crush-dominant` class naming
-- any favorable / unfavorable redirection claim
-- any claim that `x/y/z` acceleration alone is sufficient for final approval
-- any claim that the `6`-case minor cluster is a stable physical mode rather than a confounded subgroup
-- any claim that passenger or `2015-2017` subgroup linkage is stable enough for an operating standard
-- any claim that pooled safety severity is the only approval target for mode naming
-- any final promotion of `high-lateral review pocket` beyond a conservative working label
+- 과거 `0-150 ms` 기준선에서 현재 `100 ms` 후보로 운영 기간 승격
+- 최종 모드 개수
+- 최종 `redirection-dominant` 또는 `crush-dominant` 클래스 이름 지정
+- 유리한 / 불리한 redirection 주장
+- `x/y/z` 가속만으로 최종 승인이 충분하다는 주장
+- `6` 사례 마이너 클러스터가 혼란스러운 하위 그룹이 아닌 안정적인 물리적 모드라는 주장
+- 승객 또는 `2015-2017` 하위 그룹 연결이 운영 표준에 대해 충분히 안정적이라는 주장
+- 통합된 안전 심각도가 모드 명명에 대한 유일한 승인 대상이라는 주장
+- 보수적인 작업 라벨을 넘어서는 `high-lateral review pocket`의 최종 프로모션
 
-## Promotion Conditions
+## 프로모션 조건
 
-Advance from `hold` only if all of the following are met.
+다음 사항이 모두 충족되는 경우에만 `hold`에서 진행하세요.
 
-1. the selected operating window is manually accepted with rationale
-2. mode structure remains interpretable after imbalance and confounding review
-3. proxy-aware outcome linkage survives subgroup and confounding review with practical separation across the relevant outcome domains
-4. smoke coverage expands beyond shared helpers to core feature/window/join logic
-5. a reviewer signs off the final class naming rule
+1. 선택한 운영 창은 근거와 함께 수동으로 승인됩니다.
+2. 불균형 및 confounding 검토 후에도 모드 구조는 해석 가능한 상태로 유지됩니다.
+3. 프록시 인식 결과 연결은 관련 결과 영역 전반에 걸쳐 실질적으로 분리되어 하위 그룹 및 confounding 검토를 유지합니다.
+4. 연기 적용 범위는 공유 도우미를 넘어 핵심 기능/창/조인 로직까지 확장됩니다.
+5. 리뷰어가 최종 클래스 명명 규칙에 서명합니다.

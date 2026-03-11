@@ -1,28 +1,28 @@
-# Preregistered Lower-Extremity Subgroup Validation
+# 사전 등록된 Lower-Extremity 하위 그룹 검증
 
 - generated_at: `2026-03-11T05:14:16Z`
-- target: `lower_extremity_score`
-- fixed subgroup list: `test_side=passenger`, `era=2015-2017`
-- fixed model list: `ri_plus_proxies`, `ri_plus_interactions`
-- fixed readout: adjusted R^2 plus bootstrap stability and composition checks
+- 대상: `lower_extremity_score`
+- 고정 하위 그룹 목록: `test_side=passenger`, `era=2015-2017`
+- 고정 모델 목록: `ri_plus_proxies`, `ri_plus_interactions`
+- 고정 판독: 조정된 R^2와 부트스트랩 안정성 및 구성 확인
 
-## Overall Read
+## 전체 읽기
 
-- `test_side=passenger`: proxy adj R^2 `0.3748` (bootstrap median `0.4010`; p10-p90 `0.1439 - 0.5794`), interaction adj R^2 `0.3720`, complement proxy adj R^2 `0.0688`
-- `era=2015-2017`: proxy adj R^2 `0.3852` (bootstrap median `0.4040`; p10-p90 `0.2616 - 0.5578`), interaction adj R^2 `0.4000`, complement proxy adj R^2 `0.0432`
+- `test_side=passenger`: 프록시 조정 R^2 `0.3748`(부트스트랩 중앙값 `0.4010`; p10-p90 `0.1439 - 0.5794`), 상호 작용 조정 R^2 `0.3720`, 보완 프록시 조정 R^2 `0.0688`
+- `era=2015-2017`: 프록시 조정 R^2 `0.3852`(부트스트랩 중앙값 `0.4040`; p10-p90 `0.2616 - 0.5578`), 상호 작용 조정 R^2 `0.4000`, 보완 프록시 조정 R^2 `0.0432`
 
-## Composition Watch
+## 작곡 시계
 
-- `test_side=passenger` top family `Toyota Tacoma` share `0.0577`; top weight quartile `` share `nan`
-- `era=2015-2017` top family `Hyundai Sonata` share `0.0227`; top weight quartile `Q4` share `0.4079`
+- `test_side=passenger` 최고 제품군 `Toyota Tacoma` 공유 `0.0577`; 최고 체중 사분위수 '` share `nan'
+- `era=2015-2017` 최고 제품군 `Hyundai Sonata` 공유 `0.0227`; 최고 중량 사분위수 `Q4` 점유율 `0.4079`
 
-## Interpretation
+## 해석
 
-- The preregistered subgroup signal remains strongest on lower-extremity outcomes, not on pooled severity.
-- Passenger and `2015-2017` gains remain review-worthy, but they still require confounding caution before any operating claim.
-- If bootstrap support collapses or composition concentration dominates, treat the gain as opportunistic rather than as a stable subgroup rule.
+- 사전 등록된 하위 그룹 신호는 풀링된 심각도가 아닌 lower-extremity 결과에서 가장 강력하게 유지됩니다.
+- 승객 및 `2015-2017` 이익은 검토할 가치가 있지만 여전히 운영 청구 전에 confounding 주의가 필요합니다.
+- 부트스트랩 지원이 붕괴되거나 구성 집중이 지배적인 경우 이득을 안정적인 하위 그룹 규칙이 아닌 기회주의적 규칙으로 처리하십시오.
 
-## Recommendation
+## 추천
 
-- Keep these subgroup results as structured reviewer evidence, not as approval-grade claims.
-- Carry the subgroup read into confounding closure and approval-logic review before any taxonomy change.
+- 이러한 하위 그룹 결과를 승인 등급 주장이 아닌 구조화된 검토자의 증거로 유지하세요.
+- 분류법을 변경하기 전에 하위 그룹 읽기를 confounding 폐쇄 및 승인 논리 검토로 진행하세요.

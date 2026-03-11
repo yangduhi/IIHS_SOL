@@ -1,64 +1,65 @@
-# Slide Away Next Step Plan
+# 슬라이드 어웨이 다음 단계 계획
 
-- Date: `2026-03-11`
-- Status: `executed evidence package; reviewer closure pending`
+- 날짜: `2026-03-11`
+- 상태: `executed evidence package; reviewer closure pending`
 
-## Current Position
+## 현재 위치
 
-The package is execution-ready and reproducible, but final approval remains blocked by unresolved mode standardization.
-The evidence package requested for the current pass has now been executed.
-The remaining work is reviewer closure, not fresh exploratory modeling.
+패키지는 실행 준비가 되어 있고 재현 가능하지만 최종 승인은 해결되지 않은 모드 표준화로 인해 차단된 상태로 유지됩니다.
+현재 패스에 대해 요청된 증거 패키지가 이제 실행되었습니다.
+남은 작업은 새로운 탐색적 모델링이 아닌 리뷰어 마무리입니다.
 
-## Primary Analytic Frame
+## 1차 분석 프레임
 
-Use occupant-compartment `x/y/z` acceleration as the primary explanatory frame for the next pass.
+다음 패스에 대한 기본 설명 프레임으로 occupant-compartment `x/y/z` 가속도를 사용합니다.
 
-- `x`: ride-down and longitudinal delta-V context
-- `y`: barrier-relative lateralization and redirection context
-- `z`: vertical harshness and suspension or wheel-path context
+- `x`: ride-down 및 세로 방향 Delta-V 컨텍스트
+- `y`: barrier-relative 측면화 및 redirection 컨텍스트
+- `z`: 수직 harshness 및 서스펜션 또는 휠 경로 컨텍스트
 
-This is a `Level 1` kinematics and pulse layer, not a standalone approval rule.
-Treat seat or foot or compartment-response features as `Level 2` context and domain outcomes as `Level 3` approval evidence.
-Do not reduce the next pass to `x+y` only.
-Use `x+y+z` plus compartment-response context as the working multiaxis frame.
+이는 독립형 승인 규칙이 아닌 `Level 1` 운동학 및 펄스 레이어입니다.
+좌석이나 발 또는 구획 반응 기능을 `Level 2` 컨텍스트로 처리하고 도메인 결과를 `Level 3` 승인 증거로 처리합니다.
+다음 패스를 `x+y`로만 줄이지 마세요.
+`x+y+z`와 구획 응답 컨텍스트를 작업 multiaxis 프레임으로 사용합니다.
 
-## Completed Evidence Package
+## 완성된 증거 패키지
 
-1. `100 ms` versus historic `0-150 ms` review rerun with `x/y/z` signature change
-2. `6`-case minor-cluster review rerun in `x/y/z` pulse terms
-3. preregistered lower-extremity subgroup validation executed for `passenger` and `2015-2017`
-4. selected-mode confounding sign-off executed across side, era, family, and weight proxy
-5. domain-aware approval logic memo executed
-6. observation-flavored naming review executed
-7. regression tests expanded to feature rules, window selection, and domain join logic
+1. `100 ms` 대 `x/y/z` 서명 변경으로 과거 `0-150 ms` 검토 재실행
+2. `6` 케이스 마이너 클러스터 검토는 `x/y/z` 펄스 용어로 재실행됩니다.
+3. `passenger` 및 `2015-2017`에 대해 실행된 사전 등록된 lower-extremity 하위 그룹 검증
+4. 선택 모드 confounding sign-off는 측면, 시대, 제품군 및 가중치 프록시 전반에 걸쳐 실행됩니다.
+5. 도메인 인식 승인 로직 메모가 실행되었습니다.
+6. 관찰 중심 네이밍 검토 실시
+7. 도메인 점수 민감도 검토가 실행되었습니다.
+8. 기능 규칙, 창 선택 및 도메인 가입 논리로 확장된 회귀 테스트
 
-## Remaining Reviewer Closure
+## 남은 리뷰어 마감
 
-1. Operating-window decision
-   - accept `100 ms` or preserve historic `0-150 ms` with case-level `x/y/z` rationale
-   - deliverable: signed window decision note
-2. Minor-cluster manual review
-   - close whether the current `high-lateral review pocket` is interpretable or rejected as confounded
-   - deliverable: signed minor-cluster disposition
-3. Subgroup disposition
-   - decide whether `passenger` and `2015-2017` lower-ext signals remain exploratory or are accepted as structured reviewer evidence
-   - deliverable: subgroup disposition note
-4. Domain-aware approval frame
-   - accept or reject pooled-summary-only plus domain-first approval logic
-   - deliverable: signed approval-frame note
-5. Naming sign-off
-   - accept or reject the conservative observation-flavored naming rule
-   - deliverable: signed naming-rule note
-6. Regression hardening
-   - decide whether current `11` tests are sufficient for research-package status or if more production-grade coverage is required
-   - deliverable: test sufficiency note
+1. 운영 기간 결정
+   - `100 ms`를 수락하거나 사례 수준 `x/y/z` 근거로 과거 `0-150 ms`를 보존합니다.
+   - 결과물: 서명된 기간 결정 메모
+2. 마이너 클러스터 수동 검토
+   - 현재 `high-lateral review pocket`가 해석 가능한지 아니면 혼동된 것으로 거부되는지 여부를 닫습니다.
+   - 결과물: 서명된 마이너 클러스터 처리
+3. 하위 그룹 배치
+   - `passenger` 및 `2015-2017` 하위 확장 신호가 계속 탐색적인지 아니면 구조화된 검토자 증거로 허용되는지 결정합니다.
+   - 결과물: 하위 그룹 처리 노트
+4. 도메인 인식 승인 프레임
+   - pooled 요약만 허용하거나 도메인 우선 승인 로직을 거부합니다.
+   - 결과물: 서명된 승인 프레임 메모
+5. 이름 지정 sign-off
+   - 보수적인 관찰 중심 명명 규칙을 수락하거나 거부합니다.
+   - 결과물: 서명된 명명 규칙 참고
+6. 회귀 강화
+   - 현재 `14` 테스트가 연구 패키지 상태에 충분한지 또는 더 많은 생산 등급 적용 범위가 필요한지 결정합니다.
+   - 결과물: 테스트 충분성 참고사항
 
-## Gate To Leave Hold
+## 보류를 떠나는 게이트
 
-Leave `hold` only if all of the following are satisfied.
+다음 사항이 모두 충족되는 경우에만 `hold`를 그대로 두세요.
 
-1. an operating window is accepted with written rationale
-2. the lower-extremity subgroup signal is either validated or rejected after preregistered checks
-3. the minor cluster is either rejected as confounded or defended as interpretable after manual review
-4. the domain-aware approval frame is accepted and practical interpretation is no longer dependent on pooled severity alone
-5. final naming remains conservative until a reviewer signs off the taxonomy
+1. 운영 기간은 서면 근거로 승인됩니다.
+2. lower-extremity 하위 그룹 신호는 사전 등록된 검사 후에 검증되거나 거부됩니다.
+3. 소규모 클러스터는 혼란스러운 것으로 거부되거나 수동 검토 후 해석 가능한 것으로 방어됩니다.
+4. 도메인 인식 승인 프레임이 허용되며 실제 해석은 더 이상 풀링된 심각도에만 의존하지 않습니다.
+5. 최종 명명은 검토자가 분류법을 승인할 때까지 보수적으로 유지됩니다.

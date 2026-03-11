@@ -1,76 +1,76 @@
-# XYZ Primary Frame Note
+# XYZ 기본 프레임 참고
 
-- Date: `2026-03-11`
-- Status: `active framing note`
+- 날짜: `2026-03-11`
+- 상태: `active framing note`
 
-## Purpose
+## 목적
 
-This note fixes the intended reading frame for the next `slide_away` analysis pass.
-The study should prioritize occupant-compartment `x/y/z` acceleration as the primary physical interpretation layer.
-This does not mean `x/y/z` is the only approval basis.
-It means `x/y/z` should lead the physical reading, while compartment-response context and domain outcomes remain necessary for approval.
+이 노트는 다음 `slide_away` 분석 패스에 대한 의도된 판독 프레임을 수정합니다.
+연구에서는 기본 물리적 해석 계층으로 occupant-compartment `x/y/z` 가속을 우선시해야 합니다.
+이는 `x/y/z`가 유일한 승인 기준이라는 의미는 아닙니다.
+이는 `x/y/z`가 물리적 판독을 주도해야 하며 구획 응답 컨텍스트 및 도메인 결과는 승인을 위해 계속 필요함을 의미합니다.
 
-## Primary Interpretation
+## 1차 통역
 
 - `x`
   - ride-down
-  - longitudinal delta-V context
-  - timing and pulse duration on the forward axis
+  - 종방향 델타-V 컨텍스트
+  - 순방향 축의 타이밍 및 펄스 지속 시간
 - `y`
-  - barrier-relative lateralization
-  - redirection context
-  - side-harmonized `away` interpretation
+  - barrier-relative 편측화
+  - redirection 컨텍스트
+  - 측면 조화 `away` 해석
 - `z`
-  - vertical harshness
-  - wheel or suspension path response
-  - potential lower-extremity and upper-body harsh-event context
+  - 수직 harshness
+  - 휠 또는 서스펜션 경로 반응
+  - 잠재적인 lower-extremity 및 상체의 가혹한 상황 상황
 
-## Why This Frame Is Kept
+## 이 프레임이 유지되는 이유
 
-- the IIHS small overlap study logic is not well represented by `x` alone
-- `y` is needed for barrier-relative lateral motion and redirection reading
-- `z` should not be dropped because current linkage work shows harshness remains informative
-- current package evidence is more consistent with a multiaxis kinematics frame than with an RI-only or binary redirection-versus-crush frame
+- IIHS Small Overlap 연구 논리는 `x`만으로는 잘 표현되지 않습니다.
+- barrier-relative 측면 이동 및 redirection 판독에는 `y`가 필요합니다.
+- 현재 연결 작업에서 harshness가 여전히 정보를 제공하므로 `z`를 삭제해서는 안 됩니다.
+- 현재 패키지 증거는 RI 전용 또는 바이너리 redirection 대 충돌 프레임보다 multiaxis 운동학 프레임과 더 일치합니다.
 
-## Limits
+## 제한
 
-- these signals are best treated as occupant-compartment pulse and kinematics proxies
-- they should not be presented as direct vehicle-global energy accounting
-- they should not be treated as sufficient for final approval by themselves
-- final approval still requires domain-aware outcome evidence and compartment-response context
+- 이러한 신호는 occupant-compartment 펄스 및 운동학 프록시로 가장 잘 처리됩니다.
+- 직접적인 차량-글로벌 에너지 회계로 제시되어서는 안됩니다.
+- 그 자체로 최종 승인을 받기에 충분한 것으로 간주되어서는 안 됩니다.
+- 최종 승인에는 여전히 도메인 인식 결과 증거와 구획 응답 컨텍스트가 필요합니다.
 
-## Working Three-Layer Structure
+## 3중 구조 작동
 
 1. `Level 1: kinematics and pulse`
-   - `x/y/z` acceleration
-   - delta-V
+   - `x/y/z` 가속
+   - 델타-V
    - RI
-   - timing and duration features
+   - 타이밍 및 기간 기능
 2. `Level 2: compartment and occupant-response context`
-   - seat twist
-   - foot asymmetry
-   - lower-extremity proxies
-   - restraint timing proxies
+   - 좌석 트위스트
+   - 발 비대칭
+   - lower-extremity 프록시
+   - 구속 타이밍 프록시
 3. `Level 3: approval and outcome evidence`
-   - intrusion
-   - lower-extremity outcomes
-   - restraint and kinematics outcomes
-   - head-neck-chest outcomes
+   - 강요
+   - lower-extremity 결과
+   - 구속 및 운동학 결과
+   - head-neck-chest 결과
 
-## Immediate Implications For Next Work
+## 다음 작업에 대한 즉각적인 영향
 
-1. `100 ms` versus historic `0-150 ms` review should compare representative cases by `x/y/z` signature change first, not by RI alone.
-2. Minor-cluster manual review should read the cluster in `x/y/z` pulse terms before assigning any mode meaning.
-3. Subgroup re-tests should preserve the same `x/y/z + context + domain outcome` structure.
-4. Confounding review should explicitly test whether observed `x/y/z` differences collapse under side, era, make-model family, or weight-class slicing.
-5. Naming redesign should stay observation-flavored and should not outrun the current evidence.
+1. `100 ms` 대 과거 `0-150 ms` 검토는 RI 단독이 아닌 먼저 `x/y/z` 서명 변경을 기준으로 대표적인 사례를 비교해야 합니다.
+2. 마이너 클러스터 수동 검토에서는 모드 의미를 할당하기 전에 `x/y/z` 펄스 용어로 클러스터를 읽어야 합니다.
+3. 하위 그룹 재테스트에서는 동일한 `x/y/z + context + domain outcome` 구조를 유지해야 합니다.
+4. Confounding 검토에서는 관찰된 `x/y/z` 차이가 측면, 시대, 제조사 모델 제품군 또는 가중치 클래스 슬라이싱에서 붕괴되는지 여부를 명시적으로 테스트해야 합니다.
+5. 명명 재설계는 관찰 중심으로 유지되어야 하며 현재 증거를 초과해서는 안 됩니다.
 
-## Current Safe Position
+## 현재 안전 위치
 
-The safest current interpretation is:
+가장 안전한 현재 해석은 다음과 같습니다.
 
-- keep `x/y/z` at the center of the physical reading layer
-- keep `RI` as one component, not the sole lead axis
-- keep seat-response and harshness as essential context
-- keep domain outcomes as the approval layer
-- keep final mode naming conservative until the remaining blockers are closed
+- 물리적 읽기 계층의 중앙에 `x/y/z`를 유지합니다.
+- `RI`를 유일한 리드 축이 아닌 하나의 구성 요소로 유지하십시오.
+- seat-response 및 harshness를 필수 컨텍스트로 유지
+- 도메인 결과를 승인 계층으로 유지
+- 나머지 차단기가 닫힐 때까지 최종 모드 명명을 보수적으로 유지하십시오.

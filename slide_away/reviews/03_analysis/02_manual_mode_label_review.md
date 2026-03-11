@@ -1,18 +1,18 @@
-# Manual Mode Label Review
+# 수동 모드 라벨 검토
 
 - generated_at: `2026-03-11T05:13:18Z`
 - selected_k: `2`
 - window_ms: `150`
-- silhouette: `0.7144`
+- 실루엣: `0.7144`
 - size_ratio: `65.3333`
 
-## Working Rule
+## 근무 규칙
 
-- Final `slide_away` mode is not declared here.
-- The working labels below are provisional operating names for review only.
-- `crush-dominant` and `redirection-dominant` remain exploratory interpretations, not current working labels.
+- 최종 `slide_away` 모드는 여기서 선언되지 않습니다.
+- 아래 작업 라벨은 검토용 임시 운영 이름입니다.
+- `crush-dominant` 및 `redirection-dominant`는 현재 작동 중인 라벨이 아닌 탐색적 해석으로 남아 있습니다.
 
-## Cluster Summary
+## 클러스터 요약
 
-- `mode_0`: `392` cases; exploratory note ``
-- `mode_1`: `6` cases; exploratory note ``
+- `mode_0`: `392` 케이스; 탐구노트``
+- `mode_1`: `6` 케이스; 탐구노트``

@@ -1,33 +1,34 @@
-# Slide Away Review Folder Index
+# 슬라이드 어웨이 검토 폴더 색인
 
-- Date: `2026-03-11`
-- Status: `active`
+- 날짜: `2026-03-11`
+- 상태: `active`
 
-## Folder Rule
+## 폴더 규칙
 
-Use the `reviews` folder as a categorized evidence store.
-Do not keep new review artifacts flat under `slide_away/reviews`.
-Place each file in the category that matches its role.
-Use numeric prefixes so the work order is visible in the folder tree.
+`reviews` 폴더를 분류된 증거 저장소로 사용합니다.
+`slide_away/reviews` 아래에 새 검토 아티팩트를 플랫하게 유지하지 마십시오.
+해당 역할과 일치하는 카테고리에 각 파일을 배치합니다.
+작업 순서가 폴더 트리에 표시되도록 숫자 접두사를 사용합니다.
 
-Recommended review sequence:
+권장 검토 순서:
 `01_governance -> 02_execution -> 03_analysis -> 04_casebooks`
 
-## Categories
+## 카테고리
 
 - `01_governance/`
-  - approval state, final review, next-step plan
+  - 승인상태, 최종검토, 다음단계 계획
 - `02_execution/`
-  - script interface closure, phase execution summary
+  - 스크립트 인터페이스 클로저, 단계 실행 요약
 - `03_analysis/`
-  - window review, minor-cluster review, linkage review, mode-label review, exploratory mapping drafts
+  - 창 검토, 소규모 클러스터 검토, 연계 검토, 모드 레이블 검토, 탐색적 매핑 초안
 - `04_casebooks/`
-  - matched-pair casebook and structural codebook
+  - matched-pair 사례집 및 구조 코드북
 
-## Current Index
+## 현재 지수
 
 - `01_governance/01_final_review.md`
 - `01_governance/02_next_step_plan.md`
+- `01_governance/03_authoritative_snapshot_note.md`
 - `02_execution/01_script_interface_map.md`
 - `02_execution/02_phase_execution_summary.md`
 - `03_analysis/01_generic_3cluster_to_slide_away_candidate_mode_draft.md`
@@ -44,5 +45,7 @@ Recommended review sequence:
 - `03_analysis/12_mode_confounding_signoff.md`
 - `03_analysis/13_domain_approval_logic_review.md`
 - `03_analysis/14_observation_flavored_naming_review.md`
+- `03_analysis/15_domain_score_sensitivity_review.md`
+- `03_analysis/16_domain_score_sensitivity_task_summary.md`
 - `04_casebooks/01_matched_pair_casebook.md`
 - `04_casebooks/02_structure_strategy_codebook.csv`
