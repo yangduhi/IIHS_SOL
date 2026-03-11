@@ -105,6 +105,8 @@
   - 이제 공유 도우미, 기능 규칙, 창 선택 및 도메인 가입 논리에 대한 회귀 적용 범위가 존재합니다.
   - 연기 결과: `14` 테스트 통과
   - 기능/창/조인 논리에 대한 회귀 보호가 아직 불완전합니다.
+- reviewer closure pack:
+  - 데이터 소스, window, minor cluster, subgroup, approval frame, naming, test sufficiency 메모가 governance 폴더에 초안으로 작성되었습니다.
 
 ## 남은 승인 방해 요소
 

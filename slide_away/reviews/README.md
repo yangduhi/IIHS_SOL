@@ -29,6 +29,13 @@
 - `01_governance/01_final_review.md`
 - `01_governance/02_next_step_plan.md`
 - `01_governance/03_authoritative_snapshot_note.md`
+- `01_governance/04_data_source_status.md`
+- `01_governance/05_window_decision_note.md`
+- `01_governance/06_minor_cluster_disposition.md`
+- `01_governance/07_subgroup_disposition.md`
+- `01_governance/08_approval_frame_signoff.md`
+- `01_governance/09_naming_rule_signoff.md`
+- `01_governance/10_test_sufficiency_note.md`
 - `02_execution/01_script_interface_map.md`
 - `02_execution/02_phase_execution_summary.md`
 - `03_analysis/01_generic_3cluster_to_slide_away_candidate_mode_draft.md`

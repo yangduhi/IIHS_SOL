@@ -39,6 +39,14 @@
 - 관찰 중심 네이밍 리뷰
 - `slide_away` 아래의 QA 로그 및 검토 메모
 - 공유 도우미, 기능 규칙, 창 선택 및 도메인 가입 논리에 대한 확장된 `unittest` 적용 범위 (`14` tests)
+- reviewer closure 초안 문서 세트
+  - 데이터 소스 상태
+  - window 결정 메모
+  - 마이너 클러스터 disposition
+  - 하위 그룹 disposition
+  - approval frame sign-off
+  - naming rule sign-off
+  - test sufficiency note
 
 ## 잠정적으로 남아 있는 것
 

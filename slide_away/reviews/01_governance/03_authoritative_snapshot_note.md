@@ -1,5 +1,6 @@
 # 슬라이드 어웨이 authoritative snapshot 메모
 
+- snapshot_id: `slide_away_authoritative_2026-03-11`
 - 날짜: `2026-03-11`
 - 상태: `active`
 

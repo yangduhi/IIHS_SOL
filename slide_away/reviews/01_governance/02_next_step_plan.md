@@ -1,13 +1,14 @@
 # 슬라이드 어웨이 다음 단계 계획
 
 - 날짜: `2026-03-11`
-- 상태: `executed evidence package; reviewer closure pending`
+- 상태: `closure pack drafted; reviewer sign-off pending`
 
 ## 현재 위치
 
 패키지는 실행 준비가 되어 있고 재현 가능하지만 최종 승인은 해결되지 않은 모드 표준화로 인해 차단된 상태로 유지됩니다.
 현재 패스에 대해 요청된 증거 패키지가 이제 실행되었습니다.
 남은 작업은 새로운 탐색적 모델링이 아닌 리뷰어 마무리입니다.
+현재는 reviewer가 바로 읽을 수 있는 closure 문서 세트를 먼저 닫고, 그 뒤에 sign-off를 받는 순서로 진행합니다.
 
 ## 1차 분석 프레임
 
@@ -51,8 +52,18 @@
    - 보수적인 관찰 중심 명명 규칙을 수락하거나 거부합니다.
    - 결과물: 서명된 명명 규칙 참고
 6. 회귀 강화
-   - 현재 `14` 테스트가 연구 패키지 상태에 충분한지 또는 더 많은 생산 등급 적용 범위가 필요한지 결정합니다.
-   - 결과물: 테스트 충분성 참고사항
+    - 현재 `14` 테스트가 연구 패키지 상태에 충분한지 또는 더 많은 생산 등급 적용 범위가 필요한지 결정합니다.
+    - 결과물: 테스트 충분성 참고사항
+
+## 작성 완료된 closure 문서
+
+- `01_governance/04_data_source_status.md`
+- `01_governance/05_window_decision_note.md`
+- `01_governance/06_minor_cluster_disposition.md`
+- `01_governance/07_subgroup_disposition.md`
+- `01_governance/08_approval_frame_signoff.md`
+- `01_governance/09_naming_rule_signoff.md`
+- `01_governance/10_test_sufficiency_note.md`
 
 ## 보류를 떠나는 게이트
 

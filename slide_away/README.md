@@ -47,6 +47,7 @@
 - 연구 프레임, 측면 조화 규칙 및 결과 축은 구조적으로 일관성을 유지합니다.
 - 이제 표준 스크립트 인터페이스 클로저, `signal_ready_flag` 증거 및 단계 아티팩트가 저장소에 존재합니다.
 - 나머지 보류 사유는 포장이 아닌 검증입니다.
+- reviewer closure 초안 문서 세트가 `reviews/01_governance/04_*`부터 `10_*`까지 작성되었습니다.
 - 현재 window sweep는 `100 ms`를 선호하지만 해당 운영 창 승격은 여전히 수동 승인이 필요합니다.
 - 창 검토에서는 `100 ms`가 과거 `0-150 ms` 기준선보다 약간 앞선 것으로 표시되므로 이전 기준선은 아직 폐기되지 않았습니다.
 - 현재 모드 분석에서는 불균형이 심한 `k=2`(`392 / 6`)를 선택하므로 최종 모드 표준이 승인되지 않습니다.
@@ -97,6 +98,20 @@
   - 현재 승인현황 및 폐쇄사항
 - `reviews/01_governance/03_authoritative_snapshot_note.md`
   - 최신 rerun 기준 문서와 authoritative snapshot 규칙
+- `reviews/01_governance/04_data_source_status.md`
+  - authoritative DB와 deprecated placeholder 경로 상태 메모
+- `reviews/01_governance/05_window_decision_note.md`
+  - `100 ms` 대 historic `0-150 ms` 운영 창 sign-off 초안
+- `reviews/01_governance/06_minor_cluster_disposition.md`
+  - `6` 케이스 포켓의 reviewer disposition 초안
+- `reviews/01_governance/07_subgroup_disposition.md`
+  - passenger 및 `2015-2017` 하위 그룹 증거 disposition 초안
+- `reviews/01_governance/08_approval_frame_signoff.md`
+  - domain-first approval frame sign-off 초안
+- `reviews/01_governance/09_naming_rule_signoff.md`
+  - observation-flavored naming sign-off 초안
+- `reviews/01_governance/10_test_sufficiency_note.md`
+  - 현재 `14`개 테스트의 sufficiency 메모
 - `reviews/02_execution/01_script_interface_map.md`
   - 실행된 스크립트 인터페이스 클로저
 - `reviews/03_analysis/03_window_candidate_review.md`

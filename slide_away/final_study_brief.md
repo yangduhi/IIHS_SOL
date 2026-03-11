@@ -67,6 +67,8 @@
 - 확인:
   - `unittest` 적용 범위에는 이제 기능 규칙, 창 선택 및 도메인 가입 동작이 포함됩니다.
   - 현재 연기 결과: `14` 테스트 통과
+- reviewer closure pack:
+  - data source, window, minor cluster, subgroup, approval frame, naming, test sufficiency 메모가 `reviews/01_governance/04_*`부터 `10_*`까지 작성됨
 
 ## 해석
 
