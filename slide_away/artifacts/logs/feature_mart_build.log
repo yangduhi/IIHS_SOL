@@ -1,0 +1,8 @@
+generated_at=2026-03-11T05:12:54Z
+mode=standard_baseline
+features=slide_away/artifacts/marts/features_v1.parquet
+summary_csv=slide_away/artifacts/tables/features_v1_summary.csv
+row_count=406
+cluster_input_count=398
+mean_feature_quality_score=0.967707
+mean_ri_60=0.479731

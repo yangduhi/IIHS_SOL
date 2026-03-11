@@ -1,0 +1,8 @@
+generated_at=2026-03-11T05:13:04Z
+mode=strict_origin
+features=slide_away/artifacts/marts/features_v1_strict_origin.parquet
+summary_csv=slide_away/artifacts/tables/features_v1_strict_origin_summary.csv
+row_count=406
+cluster_input_count=398
+mean_feature_quality_score=0.967433
+mean_ri_60=0.501362

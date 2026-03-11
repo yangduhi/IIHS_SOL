@@ -1,0 +1,6 @@
+metric,value
+row_count,413.0
+mean_quality_score,0.805298
+available_intrusion,329.0
+available_head_hic15,406.0
+available_ri_linkable_core,410.0

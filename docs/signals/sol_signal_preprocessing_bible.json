@@ -1,0 +1,614 @@
+{
+  "document_metadata": {
+    "document_id": "sol_signal_preprocessing_bible",
+    "title": "IIHS SOL Signal Preprocessing Bible",
+    "version": "1.0.0",
+    "status": "active_reference",
+    "language": "ko-KR",
+    "generated_on": "2026-03-09",
+    "workspace": "D:/vscode/IIHS_SOL",
+    "scope_statement": "이 문서는 IIHS Small Overlap 코퍼스의 signal data 전처리 기준서다. 문서형 ETL은 보조 범위이며, 본문 규칙의 중심은 raw signal, signal metadata, signal-side derived output이다.",
+    "current_protocol_verification": {
+      "as_of": "2026-03-09",
+      "current_protocol": "IIHS Small Overlap Protocol Version VIII (May 2025)",
+      "verification_source_id": "iihs_protocol_index"
+    }
+  },
+  "normative_hierarchy": [
+    {
+      "rank": 1,
+      "source_id": "iihs_small_overlap_protocol_v8",
+      "authority": "IIHS",
+      "strength": "primary",
+      "applies_to": [
+        "signal acquisition",
+        "zeroing",
+        "filtering",
+        "calculation environment",
+        "occupant excursion"
+      ]
+    },
+    {
+      "rank": 2,
+      "source_id": "sae_j211_1_via_iihs",
+      "authority": "SAE via IIHS incorporation",
+      "strength": "primary_by_reference",
+      "applies_to": [
+        "channel frequency class filtering"
+      ]
+    },
+    {
+      "rank": 3,
+      "source_id": "sae_j1727_via_iihs",
+      "authority": "SAE via IIHS incorporation",
+      "strength": "primary_by_reference",
+      "applies_to": [
+        "injury and derived calculations"
+      ]
+    },
+    {
+      "rank": 4,
+      "source_id": "ni_tdms_format",
+      "authority": "NI",
+      "strength": "vendor_format_authority",
+      "applies_to": [
+        "tdms structure",
+        "tdms_index semantics"
+      ]
+    },
+    {
+      "rank": 5,
+      "source_id": "ni_diadem_datafilesave",
+      "authority": "NI",
+      "strength": "vendor_export_authority",
+      "applies_to": [
+        "tdm/tdx export",
+        "csv export limitations"
+      ]
+    },
+    {
+      "rank": 6,
+      "source_id": "repo_signal_policy",
+      "authority": "Repository policy",
+      "strength": "local_policy",
+      "applies_to": [
+        "raw preservation",
+        "preferred parse order",
+        "unsupported legacy format handling"
+      ]
+    }
+  ],
+  "current_corpus_snapshot": {
+    "filegroup_count": 413,
+    "test_type_split": {
+      "driver_side": 361,
+      "passenger_side": 52
+    },
+    "downloaded_file_rows": 24793,
+    "excluded_file_rows": 148,
+    "error_filegroups": 2,
+    "major_signal_families": {
+      "legacy_das_total": 19717,
+      "legacy_das_breakdown": {
+        ".bin": 14428,
+        ".pi": 1508,
+        ".chn": 1404,
+        ".tlf": 358,
+        ".tlf_pretest_backup": 352,
+        ".dat": 379,
+        ".log": 386,
+        ".tdv": 828
+      },
+      "ni_diadem_total": 986,
+      "ni_diadem_breakdown": {
+        ".tdms": 425,
+        ".tdms_index": 428,
+        ".tdm": 58,
+        ".tdx": 75
+      },
+      "metadata_files": {
+        ".ini": 375,
+        ".dts": 9,
+        ".xml": 58
+      },
+      "signal_sidecars": {
+        ".csv": 382,
+        ".txt": 710
+      }
+    },
+    "research_db_signal_status": {
+      "signal_containers_done": 805,
+      "signal_containers_pending": 19385,
+      "signal_containers_skipped": 2
+    },
+    "interpretation": "코퍼스는 레거시 DAS 비중이 압도적으로 크지만, 공개형이고 안정적으로 열리는 경로는 DTS metadata, TDMS, CSV가 우선이다."
+  },
+  "official_signal_rules": {
+    "acquisition": [
+      {
+        "rule_id": "R_ACQ_001",
+        "requirement": "모든 측정치는 crash 동안 16-bit, 10 kHz로 기록한다.",
+        "value": {
+          "resolution_bits": 16,
+          "sample_rate_hz": 10000
+        },
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8"
+        ],
+        "status": "explicit_official"
+      },
+      {
+        "rule_id": "R_ACQ_002",
+        "requirement": "모든 채널은 simultaneous conversion이어야 한다.",
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8"
+        ],
+        "status": "explicit_official"
+      },
+      {
+        "rule_id": "R_ACQ_003",
+        "requirement": "analog low-pass prefilter cutoff는 3 kHz다.",
+        "value": {
+          "analog_prefilter_cutoff_hz": 3000
+        },
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8"
+        ],
+        "status": "explicit_official"
+      },
+      {
+        "rule_id": "R_ACQ_004",
+        "requirement": "기본 acquisition은 DTS TDAS G5이며, 추가 acquisition에는 TDAS G5 iPort 또는 DTS SLICE MICRO를 사용할 수 있다.",
+        "value": {
+          "base_system": "DTS TDAS G5",
+          "additional_allowed_systems": [
+            "TDAS G5 iPort",
+            "DTS SLICE MICRO"
+          ]
+        },
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8"
+        ],
+        "status": "explicit_official"
+      }
+    ],
+    "zeroing_and_filtering": [
+      {
+        "rule_id": "R_FIL_001",
+        "requirement": "각 채널 initial offset은 impact 이전 50~40 ms 구간 100포인트 평균을 빼서 제거한다.",
+        "value": {
+          "window_ms": {
+            "start": -50,
+            "end": -40
+          },
+          "point_count": 100
+        },
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8"
+        ],
+        "status": "explicit_official"
+      },
+      {
+        "rule_id": "R_FIL_002",
+        "requirement": "디지털 필터는 SAE J211/1이 권고하는 channel frequency class를 사용한다.",
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8",
+          "sae_j211_1_via_iihs"
+        ],
+        "status": "explicit_official"
+      },
+      {
+        "rule_id": "R_FIL_003",
+        "requirement": "vehicle acceleration array는 CFC 60으로 제시한다.",
+        "value": {
+          "channel_family": "vehicle_acceleration_arrays",
+          "cfc": 60
+        },
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8"
+        ],
+        "status": "explicit_official"
+      },
+      {
+        "rule_id": "R_FIL_004",
+        "requirement": "seat back deflection data는 CFC 60으로 필터링한다.",
+        "value": {
+          "channel_family": "seat_back_deflection",
+          "cfc": 60
+        },
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8"
+        ],
+        "status": "explicit_official"
+      },
+      {
+        "rule_id": "R_FIL_005",
+        "requirement": "foot acceleration은 CFC 180으로 필터링한다.",
+        "value": {
+          "channel_family": "foot_accelerations",
+          "cfc": 180
+        },
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8"
+        ],
+        "status": "explicit_official"
+      },
+      {
+        "rule_id": "R_FIL_006",
+        "requirement": "모든 filtering과 subsequent calculation은 DIAdem으로 실행한다.",
+        "value": {
+          "required_environment": "DIAdem"
+        },
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8"
+        ],
+        "status": "explicit_official"
+      }
+    ],
+    "derived_calculation_rules": [
+      {
+        "rule_id": "R_CAL_001",
+        "requirement": "injury and derived calculations는 SAE J1727에 맞춘다.",
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8",
+          "sae_j1727_via_iihs"
+        ],
+        "status": "explicit_official"
+      },
+      {
+        "rule_id": "R_CAL_002",
+        "requirement": "occupant excursion은 dummy movement away from seat back과 dynamic seat back deflection을 결합해 계산한다.",
+        "value": {
+          "inputs": [
+            "pull strings or fiberglass tapes",
+            "seat back cable potentiometers",
+            "onboard video timing"
+          ]
+        },
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8"
+        ],
+        "status": "explicit_official"
+      },
+      {
+        "rule_id": "R_CAL_003",
+        "requirement": "overall dummy excursion 계산은 `small overlap excursion template.xlsx`를 사용한다.",
+        "source_ids": [
+          "iihs_small_overlap_protocol_v8"
+        ],
+        "status": "explicit_official"
+      }
+    ],
+    "guardrails": [
+      {
+        "rule_id": "R_GUARD_001",
+        "requirement": "IIHS가 explicit하게 지정하지 않은 채널의 CFC는 저장소가 임의 추정하지 않는다.",
+        "status": "local_policy",
+        "source_ids": [
+          "repo_signal_policy"
+        ]
+      },
+      {
+        "rule_id": "R_GUARD_002",
+        "requirement": "공식 필터 규칙이 불명확한 채널은 raw-preserving normalized layer까지만 생성하고, official filtered layer는 보류한다.",
+        "status": "local_policy",
+        "source_ids": [
+          "repo_signal_policy"
+        ]
+      }
+    ]
+  },
+  "canonical_preprocessing_policy": {
+    "goal": "공식 규칙을 훼손하지 않으면서 heterogeneous raw corpus를 provenance-preserving canonical signal layer로 정규화한다.",
+    "ordered_pipeline": [
+      {
+        "step": 1,
+        "name": "raw_preservation",
+        "actions": [
+          "원본 파일은 절대 덮어쓰지 않는다.",
+          "원본 상대경로, 해시, size, status를 유지한다.",
+          "가공 산출물은 raw 바깥에 둔다."
+        ]
+      },
+      {
+        "step": 2,
+        "name": "artifact_validation",
+        "actions": [
+          "로그인 HTML, empty artifact, 손상 파일을 먼저 제거한다.",
+          "확장자만 믿지 말고 snippet 또는 parser-open 검사를 한다."
+        ]
+      },
+      {
+        "step": 3,
+        "name": "metadata_first_ingestion",
+        "actions": [
+          "DTS, tdas.ini, Equipment.ini를 먼저 파싱한다.",
+          "binary parsing 전에 sensor/channel inventory를 확보한다."
+        ]
+      },
+      {
+        "step": 4,
+        "name": "preferred_signal_path_selection",
+        "actions": [
+          "동일 filegroup에 TDMS와 legacy DAS가 함께 있으면 TDMS를 first-class source로 본다.",
+          "DTS가 있으면 channel metadata authority는 DTS에 둔다."
+        ],
+        "selection_order": [
+          "DTS metadata",
+          "TDMS signal payload",
+          "TDM/TDX via DIAdem export",
+          "CSV sidecar",
+          "legacy BIN/PI/CHN/TLF family"
+        ]
+      },
+      {
+        "step": 5,
+        "name": "vendor_native_conversion_when_needed",
+        "actions": [
+          "TDM/TDX는 DIAdem/DataPlugin을 통해 TDMS 또는 TDM으로 재저장 후 처리한다.",
+          "CSV는 최후의 공개 교환 포맷으로만 쓴다."
+        ]
+      },
+      {
+        "step": 6,
+        "name": "official_filter_application",
+        "actions": [
+          "50~40 ms pre-impact mean subtraction을 zeroing 표준으로 적용한다.",
+          "명시적으로 확인된 channel family에만 official CFC를 적용한다."
+        ]
+      },
+      {
+        "step": 7,
+        "name": "canonical_export",
+        "actions": [
+          "canonical 시계열은 Parquet로 저장한다.",
+          "series별 sample_count, sample_rate_hz, unit, time_start, time_end, stats_json을 남긴다."
+        ]
+      },
+      {
+        "step": 8,
+        "name": "derived_metric_calculation",
+        "actions": [
+          "IIHS/SAE 규칙이 있는 derived value만 official namespace에 넣는다.",
+          "탐색적 계산은 exploratory layer로 분리한다."
+        ]
+      }
+    ],
+    "decision_tree": [
+      {
+        "if": "DTS exists",
+        "then": "Parse DTS first and treat it as channel metadata authority."
+      },
+      {
+        "if": "TDMS exists",
+        "then": "Use TDMS as the preferred open signal payload."
+      },
+      {
+        "if": "Only TDM or TDX exists",
+        "then": "Use DIAdem/DataPlugin export before canonical ingestion."
+      },
+      {
+        "if": "Only CSV exists",
+        "then": "Ingest CSV directly but mark it as sidecar provenance."
+      },
+      {
+        "if": "Only legacy BIN/PI/CHN/TLF family exists",
+        "then": "Do metadata-first staging and defer deep binary parsing unless a dedicated parser project is approved."
+      }
+    ]
+  },
+  "file_family_guidance": {
+    "dts_xml": {
+      "role": "sensor and module metadata authority",
+      "required_preprocessing": [
+        "UTF-16 우선, 실패 시 UTF-8 fallback",
+        "XML parse 실패 시 `<Test>...</Test>` 구간 복구 파싱",
+        "module and channel attributes를 lossless 추출"
+      ],
+      "canonical_outputs": [
+        "dts_files",
+        "dts_modules",
+        "sensor_channels"
+      ]
+    },
+    "tdas_ini": {
+      "role": "legacy DAS configuration authority",
+      "required_preprocessing": [
+        "section-based text parsing",
+        "program version, firmware, sampling, filter cutoff, ROI, DIAdem export options 추출"
+      ],
+      "canonical_outputs": [
+        "tdas_configs"
+      ]
+    },
+    "equipment_ini": {
+      "role": "rack/connectivity inventory",
+      "required_preprocessing": [
+        "RackID and ConnectInfo pair extraction"
+      ],
+      "canonical_outputs": [
+        "equipment_racks"
+      ]
+    },
+    "tdms": {
+      "role": "preferred open signal payload",
+      "official_basis": [
+        "TDMS is hierarchical: file, group, channel.",
+        "Each level can carry custom scalar properties.",
+        "A `.tdms_index` companion may exist and can regenerate."
+      ],
+      "required_preprocessing": [
+        "group and channel hierarchy 보존",
+        "wf_increment or time track로 sample rate 복원",
+        "unit and channel properties 추출",
+        "Parquet로 canonical export"
+      ],
+      "do_not": [
+        "tdms_index를 canonical payload로 취급하지 말 것"
+      ]
+    },
+    "tdms_index": {
+      "role": "auxiliary read-acceleration file",
+      "required_preprocessing": [
+        "존재 여부는 기록하되 measurement source로는 사용하지 않는다."
+      ]
+    },
+    "tdm_tdx": {
+      "role": "DIAdem-native signal container family",
+      "official_basis": [
+        "DIAdem can save TDM, TDMS, CSV and other formats.",
+        "When leaving TDM, group information or properties may be lost.",
+        "CSV export may contain only the first channel group."
+      ],
+      "required_preprocessing": [
+        "가능하면 TDMS or TDM 유지 상태로 변환",
+        "CSV export 시 selected group provenance 기록"
+      ],
+      "do_not": [
+        "CSV 한 파일을 full-fidelity archive로 간주하지 말 것"
+      ]
+    },
+    "csv_signal_sidecars": {
+      "role": "signal sidecar or environmental time series",
+      "required_preprocessing": [
+        "Date + Time를 timestamp로 결합",
+        "numeric coercion",
+        "percent-like humidity를 ratio로 정규화",
+        "timestamp delta로 sample rate 추정"
+      ]
+    },
+    "legacy_das_binary_family": {
+      "role": "large staged-only raw signal layer",
+      "includes": [
+        ".bin",
+        ".pi",
+        ".chn",
+        ".tlf",
+        ".tlf pretest backup",
+        ".dat",
+        ".log",
+        ".tdv"
+      ],
+      "required_preprocessing": [
+        "direct reverse engineering보다 metadata-first staging 우선",
+        "가능하면 vendor-native export path 확보 후 TDMS/TDM/CSV로 이동",
+        "file family별 separate parser contract 수립"
+      ],
+      "do_not": [
+        "BIN을 첫 ETL 대상으로 삼지 말 것",
+        "공식 CFC나 engineering unit을 추정으로 확정하지 말 것"
+      ]
+    }
+  },
+  "repo_alignment": {
+    "implemented_now": [
+      "DTS, tdas.ini, Equipment.ini metadata scan",
+      "signal_containers classification by extension",
+      "TDMS and CSV to Parquet export",
+      "HTML login artifact detection and skip"
+    ],
+    "not_implemented_now": [
+      "legacy BIN/PI/CHN/TLF family deep parsing",
+      "broad official CFC application beyond explicitly known channel families",
+      "full IIHS DIAdem-parity derived signal calculations"
+    ],
+    "script_map": [
+      {
+        "path": "D:/vscode/IIHS_SOL/scripts/extract_dataset_metadata.py",
+        "role": "metadata-first scan"
+      },
+      {
+        "path": "D:/vscode/IIHS_SOL/scripts/init_research_database.py",
+        "role": "asset classification into signal_containers"
+      },
+      {
+        "path": "D:/vscode/IIHS_SOL/scripts/export_signal_parquet.py",
+        "role": "TDMS/CSV canonical export"
+      }
+    ]
+  },
+  "forbidden_shortcuts": [
+    "TDMS가 있는데 CSV를 canonical master로 삼는 것",
+    "CSV 한 파일만 보고 모든 channel group이 보존되었다고 가정하는 것",
+    "명시적 근거 없이 channel별 CFC를 추정하는 것",
+    "raw signal을 inplace 수정하거나 덮어쓰는 것",
+    "login HTML artifact를 정상 신호 파일처럼 downstream parsing하는 것"
+  ],
+  "source_register": [
+    {
+      "source_id": "iihs_protocol_index",
+      "title": "IIHS test protocols and technical information",
+      "type": "official_webpage",
+      "url": "https://www.iihs.org/ratings/about-our-tests/test-protocols-and-technical-information",
+      "accessed_on": "2026-03-09",
+      "key_facts": [
+        "Current small overlap protocol is Version VIII (May 2025)."
+      ]
+    },
+    {
+      "source_id": "iihs_small_overlap_protocol_v8",
+      "title": "Small Overlap Frontal Crashworthiness Evaluation: Crash Test Protocol",
+      "type": "official_pdf",
+      "url": "https://www.iihs.org/media/b24c70f3-5354-4251-af20-0408adad2cf0/JjvNIg/Ratings/Protocols/current/small_overlap_test_protocol.pdf",
+      "accessed_on": "2026-03-09",
+      "key_facts": [
+        "16-bit, 10 kHz acquisition",
+        "3 kHz analog low-pass prefilter",
+        "zero offset removal from 50 to 40 ms pre-impact window",
+        "SAE J211/1 filtering",
+        "foot acceleration CFC 180",
+        "vehicle acceleration array CFC 60",
+        "seat back deflection CFC 60",
+        "DIAdem for filtering and subsequent calculations",
+        "small overlap excursion template.xlsx for occupant excursion"
+      ]
+    },
+    {
+      "source_id": "ni_tdms_format",
+      "title": "NI TDMS file format",
+      "type": "official_vendor_doc",
+      "url": "https://www.ni.com/en/support/documentation/supplemental/06/the-ni-tdms-file-format.html",
+      "accessed_on": "2026-03-09",
+      "key_facts": [
+        "TDMS uses file/group/channel hierarchy.",
+        "Each hierarchy level can store custom scalar properties.",
+        "`.tdms_index` is auxiliary and regenerable."
+      ]
+    },
+    {
+      "source_id": "ni_diadem_datafilesave",
+      "title": "NI DIAdem DataFileSave",
+      "type": "official_vendor_doc",
+      "url": "https://www.ni.com/docs/en-US/bundle/diadem-api-ref/page/comoff/datafilesave.htm",
+      "accessed_on": "2026-03-09",
+      "key_facts": [
+        "DIAdem can save Data Portal content in TDM, TDMS, CSV and other formats.",
+        "Leaving TDM may drop group information or properties.",
+        "CSV export may save only the first channel group."
+      ]
+    },
+    {
+      "source_id": "repo_signal_policy",
+      "title": "Local repository signal ETL policy",
+      "type": "local_repo_docs_and_code",
+      "url": "D:/vscode/IIHS_SOL/docs/dataset-analysis-guide.md",
+      "accessed_on": "2026-03-09",
+      "key_facts": [
+        "Prefer DTS metadata first, TDMS next, TDM/TDX after that, and BIN last.",
+        "Do metadata-first staging for DAS-heavy legacy tests."
+      ]
+    }
+  ],
+  "known_gaps_and_escalation_rules": {
+    "known_gaps": [
+      "공개 접근 가능한 DTS XML 공식 스키마 문서는 이번 조사에서 확보하지 못했다.",
+      "SAE J211/1 전체 채널별 CFC 매핑표는 이번 조사에서 직접 확보하지 못했다.",
+      "레거시 BIN/PI/CHN/TLF family의 공개 vendor format 문서는 이번 조사에서 확보하지 못했다."
+    ],
+    "escalation_rules": [
+      "official filtered layer를 확대하려면 SAE J211/1 원문 또는 내부 랩 표준 매핑표를 추가 확보한다.",
+      "legacy binary deep parse를 시작하려면 vendor-native export path를 먼저 확인한다.",
+      "DTS field semantics ambiguity가 남으면 DTS vendor support 자료를 추가 조사한다."
+    ]
+  }
+}

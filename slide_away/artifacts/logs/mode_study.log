@@ -1,0 +1,7 @@
+generated_at=2026-03-11T05:13:18Z
+summary_csv=slide_away/artifacts/tables/mode_study_summary.csv
+representatives_csv=slide_away/artifacts/tables/mode_representative_cases.csv
+assignments_csv=slide_away/artifacts/tables/mode_case_assignments.csv
+figure=slide_away/artifacts/figures/mode_study_overview.png
+review_md=slide_away/reviews/03_analysis/02_manual_mode_label_review.md
+selected_k=2

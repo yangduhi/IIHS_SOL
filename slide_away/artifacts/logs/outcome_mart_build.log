@@ -1,0 +1,6 @@
+generated_at=2026-03-11T03:01:10Z
+outcomes=slide_away/artifacts/marts/outcomes_v1.parquet
+summary_csv=slide_away/artifacts/tables/outcomes_v1_summary.csv
+coverage_csv=slide_away/artifacts/tables/outcomes_v1_coverage.csv
+row_count=413
+mean_quality_score=0.805298

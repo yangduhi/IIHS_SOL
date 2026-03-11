@@ -1,0 +1,6 @@
+generated_at=2026-03-11T05:13:35Z
+minor_csv=slide_away/artifacts/tables/minor_cluster_6case_review.csv
+confounding_csv=slide_away/artifacts/tables/mode_confounding_summary.csv
+figure=slide_away/artifacts/figures/minor_cluster_profile.png
+review_md=slide_away/reviews/03_analysis/04_minor_cluster_review.md
+minor_cluster_size=6

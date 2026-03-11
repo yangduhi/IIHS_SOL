@@ -1,0 +1,8 @@
+generated_at=2026-03-11T05:13:36Z
+domain_scores_csv=slide_away/artifacts/tables/domain_outcome_scores.csv
+signal_summary_csv=slide_away/artifacts/tables/domain_linkage_signal_summary.csv
+model_summary_csv=slide_away/artifacts/tables/domain_linkage_model_summary.csv
+subgroup_summary_csv=slide_away/artifacts/tables/domain_linkage_subgroup_summary.csv
+overview_fig=slide_away/artifacts/figures/domain_linkage_overview.png
+review_md=slide_away/reviews/03_analysis/07_domain_outcome_linkage_review.md
+row_count=406

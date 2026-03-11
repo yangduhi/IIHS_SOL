@@ -1,0 +1,413 @@
+{
+  "meta": {
+    "title": "IIHS project functional reorganization manifest",
+    "generated_on": "2026-03-11",
+    "workspace": "D:/vscode/IIHS",
+    "status": "implemented_with_wrappers_and_doc_stubs",
+    "last_verified_on": "2026-03-11",
+    "cli_compatibility_policy": "preserve_existing_entrypoints_with_wrappers"
+  },
+  "verified_state": {
+    "db_path": "data/research/research.sqlite",
+    "table_counts": {
+      "filegroups": 413,
+      "assets": 24943,
+      "signal_containers": 20192,
+      "signal_series": 58915,
+      "excel_workbooks": 1851,
+      "excel_sheets": 16970,
+      "pdf_documents": 472,
+      "pdf_pages": 5361,
+      "pdf_page_features": 5361,
+      "pdf_layout_assignments": 785,
+      "extracted_metrics": 216506,
+      "preprocessing_cases": 1618,
+      "preprocessing_feature_sets": 2842,
+      "preprocessing_neighbors": 28420,
+      "preprocessing_clusters": 2842,
+      "preprocessing_representatives": 322
+    }
+  },
+  "scope": {
+    "in_scope": [
+      "scripts/*.py",
+      "scripts/*.mjs",
+      "scripts/*.ps1",
+      "scripts/lib/*.mjs",
+      "docs/*.md",
+      "docs/*.json",
+      "docs/rebuild-from-scratch/*",
+      "package.json",
+      "sql/research_database.sql"
+    ],
+    "out_of_scope": [
+      "data/raw",
+      "data/index",
+      "data/analysis",
+      "data/derived",
+      "data/research",
+      "output",
+      ".venv",
+      "node_modules",
+      ".playwright-cli",
+      ".ai",
+      "tmp"
+    ]
+  },
+  "core_axes": [
+    {
+      "id": "acquisition",
+      "label": "Discovery and download inventory",
+      "target_root": "scripts/core/acquisition",
+      "paths": [
+        "scripts/discover-small-overlap.mjs",
+        "scripts/download-filegroup.mjs",
+        "scripts/lib/db.mjs",
+        "scripts/lib/iihs-techdata.mjs",
+        "scripts/lib/logging.mjs"
+      ]
+    },
+    {
+      "id": "metadata",
+      "label": "Analysis staging metadata extraction",
+      "target_root": "scripts/core/metadata",
+      "paths": [
+        "scripts/extract_dataset_metadata.py"
+      ]
+    },
+    {
+      "id": "catalog",
+      "label": "Research catalog database",
+      "target_root": "scripts/core/catalog",
+      "paths": [
+        "scripts/init_research_database.py",
+        "scripts/excel_catalog_schema.py",
+        "sql/research_database.sql"
+      ]
+    },
+    {
+      "id": "documents",
+      "label": "Document ETL",
+      "target_root": "scripts/core/documents",
+      "paths": [
+        "scripts/process_excels.py",
+        "scripts/rebuild_excel_pipeline.py",
+        "scripts/process_pdfs.py"
+      ]
+    },
+    {
+      "id": "signals",
+      "label": "Signal export and preprocessing",
+      "target_root": "scripts/core/signals",
+      "paths": [
+        "scripts/export_signal_parquet.py",
+        "scripts/preprocess_known_signal_families.py",
+        "scripts/preprocess_tdms_full_standard.py",
+        "scripts/run_preprocessing_batch.py",
+        "scripts/run_full_tdms_standard_batch.py"
+      ]
+    }
+  ],
+  "classification": [
+    {
+      "path": "scripts/discover-small-overlap.mjs",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/acquisition/discover-small-overlap.mjs"
+    },
+    {
+      "path": "scripts/download-filegroup.mjs",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/acquisition/download-filegroup.mjs"
+    },
+    {
+      "path": "scripts/lib/db.mjs",
+      "kind": "library",
+      "plan": "core_keep",
+      "target": "scripts/core/lib/db.mjs"
+    },
+    {
+      "path": "scripts/lib/iihs-techdata.mjs",
+      "kind": "library",
+      "plan": "core_keep",
+      "target": "scripts/core/lib/iihs-techdata.mjs"
+    },
+    {
+      "path": "scripts/lib/logging.mjs",
+      "kind": "library",
+      "plan": "core_keep",
+      "target": "scripts/core/lib/logging.mjs"
+    },
+    {
+      "path": "scripts/extract_dataset_metadata.py",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/metadata/extract_dataset_metadata.py"
+    },
+    {
+      "path": "scripts/init_research_database.py",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/catalog/init_research_database.py"
+    },
+    {
+      "path": "scripts/excel_catalog_schema.py",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/catalog/excel_catalog_schema.py"
+    },
+    {
+      "path": "scripts/process_excels.py",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/documents/process_excels.py"
+    },
+    {
+      "path": "scripts/rebuild_excel_pipeline.py",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/documents/rebuild_excel_pipeline.py"
+    },
+    {
+      "path": "scripts/process_pdfs.py",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/documents/process_pdfs.py"
+    },
+    {
+      "path": "scripts/export_signal_parquet.py",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/signals/export_signal_parquet.py"
+    },
+    {
+      "path": "scripts/preprocess_known_signal_families.py",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/signals/preprocess_known_signal_families.py"
+    },
+    {
+      "path": "scripts/preprocess_tdms_full_standard.py",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/signals/preprocess_tdms_full_standard.py"
+    },
+    {
+      "path": "scripts/run_preprocessing_batch.py",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/signals/run_preprocessing_batch.py"
+    },
+    {
+      "path": "scripts/run_full_tdms_standard_batch.py",
+      "kind": "script",
+      "plan": "core_keep",
+      "target": "scripts/core/signals/run_full_tdms_standard_batch.py"
+    },
+    {
+      "path": "scripts/build_excel_dashboard.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/dashboards/build_excel_dashboard.py"
+    },
+    {
+      "path": "scripts/export_excel_catalog.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/exports/export_excel_catalog.py"
+    },
+    {
+      "path": "scripts/rebuild_excel_catalog.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/exports/rebuild_excel_catalog.py"
+    },
+    {
+      "path": "scripts/build_pdf_dashboard.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/dashboards/build_pdf_dashboard.py"
+    },
+    {
+      "path": "scripts/export_pdf_result_catalog.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/exports/export_pdf_result_catalog.py"
+    },
+    {
+      "path": "scripts/export_pdf_result_rows.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/exports/export_pdf_result_rows.py"
+    },
+    {
+      "path": "scripts/rebuild_pdf_catalog.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/exports/rebuild_pdf_catalog.py"
+    },
+    {
+      "path": "scripts/build_signal_catalog_dashboard.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/dashboards/build_signal_catalog_dashboard.py"
+    },
+    {
+      "path": "scripts/build_signal_dashboard.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/dashboards/build_signal_dashboard.py"
+    },
+    {
+      "path": "scripts/plot_preprocessed_signals.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/dashboards/plot_preprocessed_signals.py"
+    },
+    {
+      "path": "scripts/build_signal_feature_batch.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/analytics/build_signal_feature_batch.py"
+    },
+    {
+      "path": "scripts/build_signal_feature_batch_moment.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/analytics/build_signal_feature_batch_moment.py"
+    },
+    {
+      "path": "scripts/build_signal_operations_audit.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/analytics/build_signal_operations_audit.py"
+    },
+    {
+      "path": "scripts/export_signal_ml_dataset.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/exports/export_signal_ml_dataset.py"
+    },
+    {
+      "path": "scripts/query_signal_similarity.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/analytics/query_signal_similarity.py"
+    },
+    {
+      "path": "scripts/generate_signal_case_report.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/analytics/generate_signal_case_report.py"
+    },
+    {
+      "path": "scripts/restore_signal_case_bundle.py",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/analytics/restore_signal_case_bundle.py"
+    },
+    {
+      "path": "scripts/capture-session.ps1",
+      "kind": "script",
+      "plan": "hold",
+      "target": "scripts/tools/bootstrap/capture-session.ps1"
+    },
+    {
+      "path": "scripts/build_signal_moment_batch.py",
+      "kind": "script",
+      "plan": "delete_candidate",
+      "target": "scripts/legacy/analytics/build_signal_moment_batch.py"
+    },
+    {
+      "path": "docs/README.md",
+      "kind": "doc",
+      "plan": "core_keep",
+      "target": "docs/core/README.md"
+    },
+    {
+      "path": "docs/database-build-playbook.md",
+      "kind": "doc",
+      "plan": "core_keep",
+      "target": "docs/core/database-build-playbook.md"
+    },
+    {
+      "path": "docs/research-database-architecture.md",
+      "kind": "doc",
+      "plan": "core_keep",
+      "target": "docs/core/research-database-architecture.md"
+    },
+    {
+      "path": "docs/dataset-analysis-guide.md",
+      "kind": "doc",
+      "plan": "core_keep",
+      "target": "docs/core/dataset-analysis-guide.md"
+    },
+    {
+      "path": "docs/preprocessing_db_design.md",
+      "kind": "doc",
+      "plan": "core_keep",
+      "target": "docs/signals/preprocessing_db_design.md"
+    },
+    {
+      "path": "docs/signal_preprocessing_standard.md",
+      "kind": "doc",
+      "plan": "core_keep",
+      "target": "docs/signals/signal_preprocessing_standard.md"
+    },
+    {
+      "path": "docs/sol_signal_preprocessing_bible.json",
+      "kind": "doc_data",
+      "plan": "core_keep",
+      "target": "docs/signals/sol_signal_preprocessing_bible.json"
+    },
+    {
+      "path": "docs/field-notes.md",
+      "kind": "doc",
+      "plan": "hold",
+      "target": "docs/ops/field-notes.md"
+    },
+    {
+      "path": "docs/iihs-small-overlap-download-work-instructions.md",
+      "kind": "doc",
+      "plan": "hold",
+      "target": "docs/ops/iihs-small-overlap-download-work-instructions.md"
+    },
+    {
+      "path": "docs/rebuild-from-scratch/*",
+      "kind": "doc_archive",
+      "plan": "hold",
+      "target": "docs/archive/rebuild-from-scratch/"
+    },
+    {
+      "path": "package.json",
+      "kind": "config",
+      "plan": "core_keep",
+      "target": "package.json"
+    },
+    {
+      "path": "package.json#main",
+      "kind": "config_element",
+      "plan": "delete_candidate",
+      "target": null
+    },
+    {
+      "path": "package.json#dependencies.fast-xml-parser",
+      "kind": "config_element",
+      "plan": "delete_candidate",
+      "target": null
+    },
+    {
+      "path": "scripts/download-filegroup.mjs#--pending",
+      "kind": "cli_element",
+      "plan": "delete_candidate",
+      "target": null
+    },
+    {
+      "path": "data/research.sqlite",
+      "kind": "artifact",
+      "plan": "delete_candidate",
+      "target": null
+    }
+  ]
+}

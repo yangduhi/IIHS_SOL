@@ -1,0 +1,6 @@
+generated_at=2026-03-11T02:54:12Z
+case_master=slide_away/artifacts/marts/case_master.parquet
+summary_csv=slide_away/artifacts/tables/case_master_summary.csv
+row_count=413
+signal_ready_count=406
+signal_ready_rule=mode='standard_baseline' AND status='done' AND harmonized_wide_path IS NOT NULL

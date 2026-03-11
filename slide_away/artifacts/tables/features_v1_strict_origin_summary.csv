@@ -1,0 +1,7 @@
+metric,value
+row_count,406
+mode,strict_origin
+cluster_input_count,398
+mean_feature_quality_score,0.967433
+mean_ri_60,0.501362
+mean_delta_vy_away_150,6.769954

@@ -1,0 +1,6 @@
+code,description,evidence_hint
+occupant compartment reinforcement,Changes intended to stiffen or preserve occupant compartment geometry.,"intrusion, dash/knee clearance, lower compartment geometry"
+barrier engagement structure,Changes that alter first-contact engagement or barrier load pick-up.,"early pulse, RI, overlap engagement narrative"
+additional load path,Added structural path for distributing frontal-small-overlap load.,intrusion reduction with limited restraint change
+wheel-motion modification,Changes that alter wheel or suspension motion during impact.,"footwell outcomes, toe-pan intrusion, lower extremity response"
+restraint modification,"Changes in belt, airbag, or occupant management timing.","pretensioner and airbag timing, dummy kinematics"

@@ -1,0 +1,8 @@
+approval_axis,ri_only_adj_r2,proxy_adj_r2,interaction_adj_r2,recommended_role
+pooled_safety_severity,-0.0016087111089972,0.0747748091285218,0.0702894668326724,summary_only
+lower_extremity_score,0.0017470631056138,0.0877314322762331,0.085014956614377,primary_domain
+head_neck_chest_score,-0.0023792406792622,0.0193858332319634,0.0194893688184081,secondary_domain
+structure_intrusion_score,0.0012612725763464,0.0378965342563306,0.0360404338182045,secondary_domain
+restraint_kinematics_score,0.0003259278257259,0.0110697034756583,0.0194456361832875,supporting_only
+subgroup::test_side=passenger,,0.374833485217022,0.37197091337745,exploratory_hint
+subgroup::era=2015-2017,,0.3852084544809173,0.3999551207945802,exploratory_hint

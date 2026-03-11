@@ -1,0 +1,5 @@
+generated_at=2026-03-11T05:13:22Z
+summary_csv=slide_away/artifacts/tables/window_sweep_summary.csv
+figure=slide_away/artifacts/figures/window_sweep_comparison.png
+selected_operating_window_ms=100
+selected_operating_best_k=2

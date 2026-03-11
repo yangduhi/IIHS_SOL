@@ -1,0 +1,26 @@
+{
+  "name": "iihs-sol",
+  "version": "1.0.0",
+  "description": "IIHS small overlap research catalog",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "discover": "node scripts/discover-small-overlap.mjs",
+    "download:pending": "node scripts/download-filegroup.mjs --pending",
+    "backfill": "npm run discover && npm run download:pending",
+    "excel:export": "python scripts/export_excel_catalog.py",
+    "excel:pipeline": "python scripts/rebuild_excel_pipeline.py",
+    "excel:rebuild": "python scripts/rebuild_excel_catalog.py",
+    "pdf:export": "python scripts/export_pdf_result_catalog.py",
+    "pdf:rebuild": "python scripts/rebuild_pdf_catalog.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "fast-xml-parser": "^5.4.2",
+    "playwright": "^1.58.2"
+  }
+}

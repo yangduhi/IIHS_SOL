@@ -1,0 +1,6 @@
+generated_at=2026-03-11T05:13:41Z
+summary_csv=slide_away/artifacts/tables/window_candidate_comparison.csv
+stability_csv=slide_away/artifacts/tables/window_candidate_feature_stability.csv
+case_deltas_csv=slide_away/artifacts/tables/window_candidate_case_deltas.csv
+figure=slide_away/artifacts/figures/window_candidate_comparison.png
+review_md=slide_away/reviews/03_analysis/03_window_candidate_review.md

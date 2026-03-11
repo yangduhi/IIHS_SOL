@@ -1,0 +1,246 @@
+working_mode_label,test_side,row_count,dimension,era,make_model_family
+mode_0,driver,340,test_side,,
+mode_0,passenger,52,test_side,,
+mode_1,driver,6,test_side,,
+mode_0,,144,era,2001-2014,
+mode_0,,132,era,2015-2017,
+mode_0,,116,era,2018-2026,
+mode_1,,6,era,2001-2014,
+mode_0,,13,make_model_family,,Ford Fusion
+mode_0,,10,make_model_family,,Mitsubishi Galant
+mode_0,,6,make_model_family,,Toyota Tundra
+mode_0,,6,make_model_family,,Volvo S60
+mode_0,,5,make_model_family,,Toyota Tacoma
+mode_0,,4,make_model_family,,Acura TLX
+mode_0,,4,make_model_family,,BMW X1
+mode_0,,4,make_model_family,,Buick Encore
+mode_0,,4,make_model_family,,Chevrolet Malibu
+mode_0,,4,make_model_family,,Chevrolet Silverado 1500
+mode_0,,4,make_model_family,,Ford Escape
+mode_0,,4,make_model_family,,Ford Explorer
+mode_0,,4,make_model_family,,Ford F 150
+mode_0,,4,make_model_family,,Jeep Wrangler 4 door
+mode_0,,4,make_model_family,,Kia Forte
+mode_0,,4,make_model_family,,Kia Soul
+mode_0,,4,make_model_family,,Ram 1500
+mode_0,,4,make_model_family,,Toyota RAV4
+mode_0,,3,make_model_family,,Chrysler Pacifica
+mode_0,,3,make_model_family,,Ford Taurus
+mode_0,,3,make_model_family,,GMC Acadia
+mode_0,,3,make_model_family,,Honda Odyssey
+mode_0,,3,make_model_family,,Honda Pilot
+mode_0,,3,make_model_family,,Hyundai Sonata
+mode_0,,3,make_model_family,,Hyundai Tucson
+mode_0,,3,make_model_family,,Jeep Grand Cherokee
+mode_0,,3,make_model_family,,Lexus ES 350
+mode_0,,3,make_model_family,,Mazda 6
+mode_0,,3,make_model_family,,Nissan Frontier
+mode_0,,3,make_model_family,,Nissan Rogue
+mode_0,,3,make_model_family,,Nissan Titan
+mode_0,,3,make_model_family,,Toyota Highlander
+mode_0,,3,make_model_family,,Toyota Sienna
+mode_0,,2,make_model_family,,Acura TL
+mode_0,,2,make_model_family,,Acura TSX
+mode_0,,2,make_model_family,,Acura ZDX
+mode_0,,2,make_model_family,,Audi A4
+mode_0,,2,make_model_family,,BMW 328i
+mode_0,,2,make_model_family,,Chevrolet Bolt
+mode_0,,2,make_model_family,,Chevrolet Colorado
+mode_0,,2,make_model_family,,Chevrolet Equinox
+mode_0,,2,make_model_family,,Chevrolet Sonic
+mode_0,,2,make_model_family,,Chevrolet Tahoe
+mode_0,,2,make_model_family,,Chevrolet Traverse
+mode_0,,2,make_model_family,,Chevrolet Volt
+mode_0,,2,make_model_family,,Dodge Dart
+mode_0,,2,make_model_family,,Fiat 500
+mode_0,,2,make_model_family,,Honda CR V
+mode_0,,2,make_model_family,,Honda Fit
+mode_0,,2,make_model_family,,Honda HR V
+mode_0,,2,make_model_family,,Honda Prologue
+mode_0,,2,make_model_family,,Honda Ridgeline
+mode_0,,2,make_model_family,,Hyundai Elantra
+mode_0,,2,make_model_family,,Hyundai Santa Fe
+mode_0,,2,make_model_family,,Hyundai Veloster
+mode_0,,2,make_model_family,,Jeep Cherokee
+mode_0,,2,make_model_family,,Jeep Compass
+mode_0,,2,make_model_family,,Jeep Renegade
+mode_0,,2,make_model_family,,Kia Rio
+mode_0,,2,make_model_family,,Kia Sorento
+mode_0,,2,make_model_family,,Lexus IS
+mode_0,,2,make_model_family,,Lincoln Continental
+mode_0,,2,make_model_family,,Mazda CX 5
+mode_0,,2,make_model_family,,Mazda CX 9
+mode_0,,2,make_model_family,,Mercedes Benz C 250
+mode_0,,2,make_model_family,,Mercedes Benz GLC
+mode_0,,2,make_model_family,,Mitsubishi Outlander
+mode_0,,2,make_model_family,,Mitsubishi Outlander Sport
+mode_0,,2,make_model_family,,Nissan Altima
+mode_0,,2,make_model_family,,Nissan Maxima
+mode_0,,2,make_model_family,,Nissan Pathfinder
+mode_0,,2,make_model_family,,Nissan Sentra
+mode_0,,2,make_model_family,,Subaru Forester
+mode_0,,2,make_model_family,,Subaru Impreza
+mode_0,,2,make_model_family,,Subaru Legacy
+mode_0,,2,make_model_family,,Tesla Model 3
+mode_0,,2,make_model_family,,Tesla Model S
+mode_0,,2,make_model_family,,Toyota 4Runner
+mode_0,,2,make_model_family,,Toyota Camry
+mode_0,,2,make_model_family,,Toyota Corolla
+mode_0,,2,make_model_family,,Toyota Corolla Cross
+mode_0,,2,make_model_family,,Toyota Prius
+mode_0,,2,make_model_family,,Toyota Prius c
+mode_0,,2,make_model_family,,Toyota Prius v
+mode_0,,2,make_model_family,,Volkswagen Atlas
+mode_0,,2,make_model_family,,Volkswagen Jetta
+mode_0,,2,make_model_family,,Volkswagen Passat
+mode_0,,2,make_model_family,,Volkswagen Tiguan
+mode_0,,2,make_model_family,,Volvo XC90
+mode_0,,1,make_model_family,,Acura ILX
+mode_0,,1,make_model_family,,Acura MDX
+mode_0,,1,make_model_family,,Acura RDX
+mode_0,,1,make_model_family,,Acura RLX
+mode_0,,1,make_model_family,,Alfa Romeo Giulia
+mode_0,,1,make_model_family,,Audi A3
+mode_0,,1,make_model_family,,Audi A6
+mode_0,,1,make_model_family,,Audi All new A5
+mode_0,,1,make_model_family,,Audi Q3
+mode_0,,1,make_model_family,,Audi Q5
+mode_0,,1,make_model_family,,Audi Q7
+mode_0,,1,make_model_family,,Audi e tron
+mode_0,,1,make_model_family,,BMW 2 Series Gran Coupe
+mode_0,,1,make_model_family,,BMW 228i
+mode_0,,1,make_model_family,,BMW 330i
+mode_0,,1,make_model_family,,BMW 535i
+mode_0,,1,make_model_family,,BMW 540i
+mode_0,,1,make_model_family,,BMW X3
+mode_0,,1,make_model_family,,BMW X5
+mode_0,,1,make_model_family,,BMW i3
+mode_0,,1,make_model_family,,Buick Encore GX
+mode_0,,1,make_model_family,,Buick Envision
+mode_0,,1,make_model_family,,Buick LaCrosse
+mode_0,,1,make_model_family,,Cadillac CTS
+mode_0,,1,make_model_family,,Cadillac XT5
+mode_0,,1,make_model_family,,Chevrolet Blazer
+mode_0,,1,make_model_family,,Chevrolet Camaro
+mode_0,,1,make_model_family,,Chevrolet Cruze
+mode_0,,1,make_model_family,,Chevrolet Impala
+mode_0,,1,make_model_family,,Chevrolet Spark
+mode_0,,1,make_model_family,,Chrysler 200
+mode_0,,1,make_model_family,,Chrysler 300
+mode_0,,1,make_model_family,,Chrysler Town & Country
+mode_0,,1,make_model_family,,Dodge Avenger
+mode_0,,1,make_model_family,,Dodge Challenger
+mode_0,,1,make_model_family,,Dodge Durango
+mode_0,,1,make_model_family,,Dodge Journey
+mode_0,,1,make_model_family,,Fiat 500L
+mode_0,,1,make_model_family,,Fiat 500X
+mode_0,,1,make_model_family,,Ford Bronco
+mode_0,,1,make_model_family,,Ford C Max
+mode_0,,1,make_model_family,,Ford Edge
+mode_0,,1,make_model_family,,Ford Expedition
+mode_0,,1,make_model_family,,Ford Fiesta
+mode_0,,1,make_model_family,,Ford Flex
+mode_0,,1,make_model_family,,Ford Focus
+mode_0,,1,make_model_family,,Ford Mustang
+mode_0,,1,make_model_family,,Ford Mustang Mach E
+mode_0,,1,make_model_family,,Ford Ranger
+mode_0,,1,make_model_family,,Ford Ranger crew cab
+mode_0,,1,make_model_family,,Genesis Electrified GV70
+mode_0,,1,make_model_family,,Genesis G80 Electrified
+mode_0,,1,make_model_family,,Genesis G90
+mode_0,,1,make_model_family,,Genesis GV80
+mode_0,,1,make_model_family,,Honda Accord
+mode_0,,1,make_model_family,,Honda Accord 2 door
+mode_0,,1,make_model_family,,Honda Civic 2 door
+mode_0,,1,make_model_family,,Honda Civic 4 door
+mode_0,,1,make_model_family,,Hyundai Accent
+mode_0,,1,make_model_family,,Hyundai Genesis
+mode_0,,1,make_model_family,,Hyundai Ioniq 5
+mode_0,,1,make_model_family,,Hyundai Ioniq 6
+mode_0,,1,make_model_family,,Hyundai Ioniq Hybrid
+mode_0,,1,make_model_family,,Hyundai Kona
+mode_0,,1,make_model_family,,Hyundai Nexo
+mode_0,,1,make_model_family,,Hyundai Palisade
+mode_0,,1,make_model_family,,Hyundai Santa Cruz
+mode_0,,1,make_model_family,,Hyundai Santa Fe Sport
+mode_0,,1,make_model_family,,Infiniti G25
+mode_0,,1,make_model_family,,Infiniti Q50
+mode_0,,1,make_model_family,,Infiniti Q70
+mode_0,,1,make_model_family,,Jeep Grand Cherokee L
+mode_0,,1,make_model_family,,Jeep Patriot
+mode_0,,1,make_model_family,,Jeep Wagoneer
+mode_0,,1,make_model_family,,Jeep Wrangler
+mode_0,,1,make_model_family,,Kia Cadenza
+mode_0,,1,make_model_family,,Kia EV9
+mode_0,,1,make_model_family,,Kia Niro Plug In Hybrid
+mode_0,,1,make_model_family,,Kia Optima
+mode_0,,1,make_model_family,,Kia Sedona
+mode_0,,1,make_model_family,,Kia Seltos
+mode_0,,1,make_model_family,,Lexus CT 200h
+mode_0,,1,make_model_family,,Lexus IS 250
+mode_0,,1,make_model_family,,Lexus NX 200t
+mode_0,,1,make_model_family,,Lexus RC 350
+mode_0,,1,make_model_family,,Lexus RX
+mode_0,,1,make_model_family,,Lexus RZ
+mode_0,,1,make_model_family,,Lincoln MKS
+mode_0,,1,make_model_family,,Lincoln MKX
+mode_0,,1,make_model_family,,Lincoln MKZ
+mode_0,,1,make_model_family,,Mazda 2
+mode_0,,1,make_model_family,,Mazda 3
+mode_0,,1,make_model_family,,Mazda 5
+mode_0,,1,make_model_family,,Mazda CX 3
+mode_0,,1,make_model_family,,Mazda CX 30
+mode_0,,1,make_model_family,,Mazda CX 50
+mode_0,,1,make_model_family,,Mazda CX90
+mode_0,,1,make_model_family,,Mercedes Benz C 300
+mode_0,,1,make_model_family,,Mercedes Benz E 350
+mode_0,,1,make_model_family,,Mercedes Benz ML 350
+mode_0,,1,make_model_family,,Mini Cooper
+mode_0,,1,make_model_family,,Mini Cooper Countryman
+mode_0,,1,make_model_family,,Mistubishi Outlander
+mode_0,,1,make_model_family,,Mitsubishi Lancer
+mode_0,,1,make_model_family,,Mitsubishi Mirage
+mode_0,,1,make_model_family,,Nissa Altima
+mode_0,,1,make_model_family,,Nissan Ariya
+mode_0,,1,make_model_family,,Nissan Juke
+mode_0,,1,make_model_family,,Nissan Kicks
+mode_0,,1,make_model_family,,Nissan Leaf
+mode_0,,1,make_model_family,,Nissan Murano
+mode_0,,1,make_model_family,,Nissan Quest
+mode_0,,1,make_model_family,,Nissan Versa
+mode_0,,1,make_model_family,,Ram 1500 Crew cab
+mode_0,,1,make_model_family,,Rivian R1S
+mode_0,,1,make_model_family,,Rivian R1T
+mode_0,,1,make_model_family,,Scion FR S
+mode_0,,1,make_model_family,,Scion iA
+mode_0,,1,make_model_family,,Scion tC
+mode_0,,1,make_model_family,,Scion xB
+mode_0,,1,make_model_family,,Subaru Ascent
+mode_0,,1,make_model_family,,Subaru BRZ
+mode_0,,1,make_model_family,,Subaru Crosstrek
+mode_0,,1,make_model_family,,Subaru Solterra
+mode_0,,1,make_model_family,,Subaru WRX
+mode_0,,1,make_model_family,,Suzuki Kizashi
+mode_0,,1,make_model_family,,Tesla Model Y
+mode_0,,1,make_model_family,,Toyota Avalon
+mode_0,,1,make_model_family,,Toyota C HR
+mode_0,,1,make_model_family,,Toyota Crown
+mode_0,,1,make_model_family,,Toyota Crown Signia
+mode_0,,1,make_model_family,,Toyota Grand Highlander
+mode_0,,1,make_model_family,,Toyota Yaris
+mode_0,,1,make_model_family,,Volkswagen Arteon
+mode_0,,1,make_model_family,,Volkswagen Beetle
+mode_0,,1,make_model_family,,Volkswagen CC
+mode_0,,1,make_model_family,,Volkswagen GTI
+mode_0,,1,make_model_family,,Volkswagen ID.4
+mode_0,,1,make_model_family,,Volvo EX90
+mode_0,,1,make_model_family,,Volvo S80
+mode_0,,1,make_model_family,,Volvo S90
+mode_0,,1,make_model_family,,Volvo XC40
+mode_0,,1,make_model_family,,Volvo XC40 Recharge
+mode_1,,1,make_model_family,,Honda Accord 2 door
+mode_1,,1,make_model_family,,Honda Accord 4 door
+mode_1,,1,make_model_family,,Honda Civic 2 door
+mode_1,,1,make_model_family,,Honda Civic 4 Door
+mode_1,,1,make_model_family,,Hyundai Sonata
+mode_1,,1,make_model_family,,Volvo XC 60

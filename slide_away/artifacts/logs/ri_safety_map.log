@@ -1,0 +1,5 @@
+generated_at=2026-03-11T05:13:14Z
+table_csv=slide_away/artifacts/tables/ri_vs_safety_map.csv
+ri_map_fig=slide_away/artifacts/figures/ri_vs_safety_map.png
+phase_fig=slide_away/artifacts/figures/delta_vx_delta_vy_phase_plot.png
+row_count=398
